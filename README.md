@@ -1,2 +1,2 @@
-# JavaScript
-Practicas de temas de js
+# Proyectos Compartidos con allfrith97
+
