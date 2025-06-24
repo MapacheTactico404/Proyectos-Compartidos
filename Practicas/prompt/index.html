@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nombre=prompt("Introduce tu nombre por favor");
+        var apellido=prompt("Introduce tu apellido");
+        var edad=prompt("Introduce tu edad");
+        var restante=prompt("Introduce los años que deseas quitarte");
+        edad-=restante;
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="header">
+            <p class="logo">Curso Javascript</p>
+        </div>
+        <div class="contenido">
+            <div class="principal"></div>
+            <h1>Jugando con Variables</h1>
+            <script>
+                document.write("<p>");
+                document.write(nombre+" "+ apellido+"<br>"+"Tu edad soñada es: "+ edad);
+                document.write("</p>");
+            </script>
+        </div>
+    </div>
+</body>
+</html>

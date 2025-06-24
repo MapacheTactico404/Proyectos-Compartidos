@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        function realizar(){
+            
+            var hoy= new Date();
+            var tiempo=hoy.toTimeString();
+            alert("La hora actual es: " + tiempo);
+        }*/
+       var segundos=0;
+       var contador=setInterval(realizar,1000);
+
+       function realizar(){
+        segundos++;
+       }
+       function cancelar(){
+        clearInterval(contador);
+        alert("El contador ha sido cancelado, el total de segundos es: " + segundos);
+       }
+    </script>
+</head>
+<body>
+    <section>
+        <h1>Sitio Web</h1>
+        <button type="button" onclick="cancelar()">Dale Click!!!</button>
+    </section>
+</body>
+</html>
