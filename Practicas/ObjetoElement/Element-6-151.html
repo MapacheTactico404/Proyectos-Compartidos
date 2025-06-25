@@ -1,0 +1,30 @@
+<!--MOdificando el contenido de un elemento-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #subtitulo {
+            background: blue;
+            width: 300px;;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function cambiarcontenido(){
+            var elemento = document.getElementById("subtitulo");
+            var texto=elemento.innerHTML+ " y Naruto Uzumaki"  
+            elemento.style.background="linear-gradient(to right, orange 50%, blue 50%)";
+            elemento.innerHTML=texto;
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <h1>WebSite</h1>
+        <p id="subtitulo" onclick="cambiarcontenido()">Sasuke Uchiha</p>
+    </section>
+</body>
+</html>

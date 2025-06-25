@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function iniciar(){
+            var elemprincipal = document.getElementById("seccionprincipal");
+            var lista=elemprincipal.getElementsByTagName("p");
+            var elemento=lista[1];
+            alert("El id del primer elemento <p> es: " + elemento.id);
+        }
+    </script>
+</head>
+<body onload="iniciar()">
+    <section id="seccionprincipal">
+        <h1>Este es un sitio Web</h1>
+        <p id="subtitulo">El mejor sitio web</p>
+        <p id="Sasuke">El mejor sitio web 2</p>
+    </section>
+</body>
+</html>
