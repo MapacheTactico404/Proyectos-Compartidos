@@ -1,0 +1,39 @@
+<!--Pasando valores a la funcion que responde al evento-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function agregarEventos(){
+            var lista=document.querySelectorAll("section>p");
+            for(var f=0;f<lista.length;f++){
+                var elemento=lista[f];
+                elemento.addEventListener("click",function(evento){
+                    var mivalor=f;
+                    cambiarColor(evento,mivalor);
+                });
+            }
+        }
+        
+        function cambiarColor(evento,mivalor){
+            var elemento=evento.target;
+            elemento.innerHTML="El valor es: "+mivalor;
+        }
+        window.addEventListener("load",agregarEventos);
+    </script>
+
+</head>
+
+<body>
+    <section>
+        <h1>Sitio Web</h1>
+        <p>Mensaje número1</p>
+        <p>Mensaje número2</p>
+        <p>Mensaje número3</p>
+    </section>
+
+</body>
+</html>

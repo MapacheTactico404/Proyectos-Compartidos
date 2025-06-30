@@ -1,0 +1,36 @@
+<!--Arrojado Excepciones-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          var existencia=5;
+          function vendido(cantidad){
+            if(cantidad >existencia){
+                var error={
+                    name: "Error de Existencia",
+                    message: "No hay suficiente existencia para completar la venta",
+                    code: 1001
+                };
+                throw error;
+            }else{
+                existencia=existencia - cantidad;
+            }
+          }try{
+            vendido(8);
+          }catch(error){
+            console.log("Error capturado: " + error.name);
+            console.log("Mensaje: " + error.message);       
+            console.log("Código de error: " + error.code);
+            
+          }
+    </script>
+</head>
+<body>
+    <section>
+        <h1>Sitio Web</h1>
+    </section>
+</body>
+</html>

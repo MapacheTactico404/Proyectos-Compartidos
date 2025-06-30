@@ -1,0 +1,28 @@
+<!--Informacion de la posicion del ratón-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mostrarPosicion(){
+            alert("Posición del ratón\n X: " + event.clientX + ", Y: " + event.clientY);
+        }
+        
+        window.addEventListener("click",mostrarPosicion);
+    </script>
+    
+</head>
+
+<body>
+    <section>
+        <h1>Sitio Web</h1>
+        <p>Mensaje número1</p>
+        <p>Mensaje número2</p>
+        <p>Mensaje número3</p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!--Creando Objetos Element-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function agregarElemento(){
+            var elemento=document.querySelector("section");
+            elemento.insertAdjacentHTML("beforeend", "<p class='cuadro'>Este es un nuevo elemento</p>");
+        }
+    </script>
+</head>
+<style>
+    .cuadro{
+        background-color: lightslategray;
+        width: 300px;
+        text-align: center;
+    }
+</style>
+<body>
+    <section>
+        <h1>Sitio Web</h1>
+        <button type="button" onclick="agregarElemento()">Agregar Contenido</button>
+    </section>
+</body>
+</html>

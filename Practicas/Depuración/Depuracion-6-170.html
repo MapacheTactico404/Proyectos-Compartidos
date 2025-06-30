@@ -1,0 +1,28 @@
+<!--Detectando funciones con Modernizr-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="modernizr-custom.js"></script>
+    <script>
+        function iniciar(){
+            var elemento=document.getElementById("subtitulo");
+            if(Modernizr.boxshadow){
+                elemento.innerHTML="Tu navegador soporta box-shadow";
+            }else{
+                elemento.innerHTML="Tu navegador no soporta box-shadow";
+            }
+        }
+        window.addEventListener("load", iniciar);
+    </script>
+</head>
+<body>
+    <section>
+        <h1>
+            <p id="subtitulo"></p>
+        </h1>
+    </section>
+</body>
+</html>

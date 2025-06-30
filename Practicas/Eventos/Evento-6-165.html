@@ -1,0 +1,54 @@
+<!--Detectando teclas especiales-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            text-align: center;
+        }
+
+        #bloque{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin-top: 100px;
+            background-color: #990000;
+        }
+    </style>
+    <script>
+        function detectarTecla(evento){
+            var elemento = document.getElementById("bloque");
+            var ancho=elemento.clientWidth
+            var tecla=evento.key;
+            switch(tecla){
+                case "ArrowUp":
+                    ancho+=10;
+                    break;
+                case "ArrowDown":
+                    ancho-=10;
+                    break;
+            }
+            if(ancho<50){
+                ancho=50;
+            }
+            elemento.style.width = ancho + "px";
+            elemento.style.height = ancho + "px";
+        }
+        window.addEventListener("keydown", detectarTecla);
+    </script>
+    
+</head>
+
+<body>
+    <section>
+        <div id="bloque">
+
+        </div>
+    </section>
+
+</body>
+</html>
